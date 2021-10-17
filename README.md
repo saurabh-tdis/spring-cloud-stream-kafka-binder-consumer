@@ -44,3 +44,4 @@
                             binder: kafka
 
     4. now when even we will generate event it will consume them and do buisness logic as needed
+    5. Start the zookeeper server then kafka server 
