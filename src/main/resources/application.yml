@@ -1,0 +1,15 @@
+server:
+  port: 9292
+
+spring:
+  cloud:
+    function:
+      definition: consumeBookEvent
+    stream:
+      bindings:
+        consumeBookEvent-in-0:
+          destination: stream-cloud-test
+          consumer:
+            #Concurrency can be used with a consumer group (non-exclusive queue) to process events in multiple threads
+            concurrency: 5
+
